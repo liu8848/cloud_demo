@@ -1,0 +1,21 @@
+server:
+  port: 8011
+spring:
+  application:
+    name: user-service
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/cloud_user
+      username: root
+      password: sudalu929
+
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.139.10:8847
+
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
